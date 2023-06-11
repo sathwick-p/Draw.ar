@@ -976,21 +976,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef26c38e31c9d7449b024be6f71e38fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceFromCamera: 0.3
-  defaultColorMaterial: {fileID: 2100000, guid: 13fa321e53817984dab8cd872156dd4b, type: 2}
-  cornerVertices: 10
-  endCapVertices: 10
-  allowSimplification: 0
-  tolerance: 0.001
-  applySimplifyAfterPoints: 20
-  minDistanceBeforeNewPoint: 0.01
+  lineSettings: {fileID: 11400000, guid: 62fc0f9ae5a1f2e4096719416ee59e4d, type: 2}
   OnDraw:
     m_PersistentCalls:
       m_Calls: []
   anchorManager: {fileID: 1299309986}
   arCamera: {fileID: 1254947990}
-  defaultColor: {r: 1, g: 1, b: 1, a: 1}
-  lineWidth: 0.005
 --- !u!114 &1299309990
 MonoBehaviour:
   m_ObjectHideFlags: 0
