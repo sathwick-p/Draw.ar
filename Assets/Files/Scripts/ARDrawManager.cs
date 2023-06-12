@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Draw.Singletons;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.XR.ARFoundation;
 
@@ -22,8 +23,10 @@ public class ARDrawManager : Singleton<ARDrawManager>
     private List<ARAnchor> anchors = new List<ARAnchor>();
 
     private Dictionary<int, ARLine> Lines = new Dictionary<int, ARLine>();
-
+    [SerializeField] private UnityEvent OnClick;
     private bool CanDraw { get; set; }
+
+    public Slider slider;
 
     void Update ()
     {
@@ -32,6 +35,8 @@ public class ARDrawManager : Singleton<ARDrawManager>
         #else
         DrawOnMouse();
         #endif
+
+        
 	}
 
     public void AllowDraw(bool isAllow)
@@ -121,5 +126,11 @@ public class ARDrawManager : Singleton<ARDrawManager>
             LineRenderer line = currentLine.GetComponent<LineRenderer>();
             Destroy(currentLine);
         }
+    }
+
+    public void sliderChange(){
+        
+        lineSettings.startWidth = slider.value;
+        lineSettings.endWidth = slider.value;
     }
 }
