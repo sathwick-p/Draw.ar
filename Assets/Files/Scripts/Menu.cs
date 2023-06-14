@@ -52,11 +52,9 @@ public class Menu : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUp
         else{
             return false;
         }
-        // if (side == Side.up)
-        //     return sideMenuRectTransform.anchoredPosition.y < height;
-        // else
-        //     return sideMenuRectTransform.anchoredPosition.y < 0;
+        
     }
+    
 
     private float GetMinPosition() {
         // if(side == Side.right)

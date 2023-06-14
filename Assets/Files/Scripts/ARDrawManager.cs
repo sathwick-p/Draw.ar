@@ -133,4 +133,7 @@ public class ARDrawManager : Singleton<ARDrawManager>
         lineSettings.startWidth = slider.value;
         lineSettings.endWidth = slider.value;
     }
+
+    
+
 }

@@ -2,10 +2,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using TMPro;
+using UnityEngine.Events;
+
 public class OtherFeatures : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI TextField;
     
+    public Button startBtn;
     private LineSettings settings;
 
     public OtherFeatures(LineSettings settings)
@@ -13,22 +16,18 @@ public class OtherFeatures : MonoBehaviour
         this.settings = settings;
     }
 
-    // public TextMesh textfield;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void TextChange(){
         
         TextField.text = "Restart Experience";
     }
+
+    public void ActiveBtn(){
+        startBtn.gameObject.SetActive(true);
+    }
+    public void DeActiveBtn(){
+        startBtn.gameObject.SetActive(false);
+    }
+
+    
     
 }
