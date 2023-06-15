@@ -27,7 +27,11 @@ public class ARDrawManager : Singleton<ARDrawManager>
     private bool CanDraw { get; set; }
 
     public Slider slider;
-
+    public Material LineColorMat;
+    public Slider redSlider;
+    public Slider greenSlider;
+    public Slider blueSlider;
+    private Color LineColor;
     void Update ()
     {
         #if !UNITY_EDITOR    
@@ -134,6 +138,23 @@ public class ARDrawManager : Singleton<ARDrawManager>
         lineSettings.endWidth = slider.value;
     }
 
+    public void ColorValues(){
+        LineColor.r  = redSlider.value;
+        LineColor.g  = greenSlider.value;
+        LineColor.b  = blueSlider.value;
+        LineColor.a  = 255;
+        // lineSettings.startColor = LineColor;
+        // lineSettings.endColor = LineColor;
+        lineSettings.defaultMaterial = LineColorMat;
+        LineColorMat.color = new Color(redSlider.value,greenSlider.value,blueSlider.value,255);
+        // LineColorMat.SetColor("_Color",LineColor);
+        
+        // Debug.Log(""+lineSettings.startColor);
+        // Debug.Log("LS "+lineSettings.endColor);
+        Debug.Log("LC "+LineColor);
+        Debug.Log("MC "+LineColorMat.color);
+    }
+    
     
 
 }

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: LineSettings
   m_EditorClassIdentifier: 
   lineTagName: Line
-  startColor: {r: 1, g: 1, b: 1, a: 1}
-  endColor: {r: 1, g: 1, b: 1, a: 1}
-  startWidth: 0.03
-  endWidth: 0.03
+  startColor: {r: 74, g: 209, b: 255, a: 255}
+  endColor: {r: 74, g: 209, b: 255, a: 255}
+  startWidth: 0.01
+  endWidth: 0.01
   distanceFromCamera: 0.3
-  defaultMaterial: {fileID: 2100000, guid: 1cfcb2e3eece55a44b5f012044ec8361, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 13fa321e53817984dab8cd872156dd4b, type: 2}
   cornerVertices: 5
   endCapVertices: 5
   minDistanceBeforeNewPoint: 0.001

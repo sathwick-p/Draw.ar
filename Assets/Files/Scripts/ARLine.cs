@@ -52,8 +52,8 @@ public class ARLine
         goLineRenderer.startWidth = settings.startWidth;
         goLineRenderer.endWidth = settings.endWidth;
 
-        goLineRenderer.startColor = settings.startColor;
-        goLineRenderer.endColor = settings.endColor;
+        // goLineRenderer.startColor = settings.startColor;
+        // goLineRenderer.endColor = settings.endColor;
 
         goLineRenderer.material = settings.defaultMaterial;
         goLineRenderer.useWorldSpace = true;

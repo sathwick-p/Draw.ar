@@ -5,9 +5,9 @@ public class LineSettings : ScriptableObject
 {
     public string lineTagName = "Line";
     
-    public Color startColor = Color.white;
+    // public Color startColor = Color.white;
 
-    public Color endColor = Color.white;
+    // public Color endColor = Color.white;
 
     public float startWidth = 0.01f;
 
