@@ -9,6 +9,8 @@ public class OtherFeatures : MonoBehaviour
     public TMPro.TextMeshProUGUI TextField;
     
     public Button startBtn;
+    public Button nextBtn;
+    public Button clickBtn;
     private LineSettings settings;
 
     public OtherFeatures(LineSettings settings)
@@ -23,9 +25,13 @@ public class OtherFeatures : MonoBehaviour
 
     public void ActiveBtn(){
         startBtn.gameObject.SetActive(true);
+        nextBtn.gameObject.SetActive(true);
+        clickBtn.gameObject.SetActive(true);
     }
     public void DeActiveBtn(){
         startBtn.gameObject.SetActive(false);
+        nextBtn.gameObject.SetActive(false);
+        clickBtn.gameObject.SetActive(false);
     }
 
     

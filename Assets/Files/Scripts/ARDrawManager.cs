@@ -40,7 +40,7 @@ public class ARDrawManager : Singleton<ARDrawManager>
         DrawOnMouse();
         #endif
 
-        
+
 	}
 
     public void AllowDraw(bool isAllow)
@@ -137,7 +137,9 @@ public class ARDrawManager : Singleton<ARDrawManager>
         lineSettings.startWidth = slider.value;
         lineSettings.endWidth = slider.value;
     }
-
+    
+        
+    
     public void ColorValues(){
         LineColor.r  = redSlider.value;
         LineColor.g  = greenSlider.value;

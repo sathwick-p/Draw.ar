@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DrawSceneBasic.unity
     guid: da6325c4dc73c9046909afa59f3c8666
+  - enabled: 0
+    path: Assets/Scenes/Camera.unity
+    guid: c73331c4dc8f95e48be3ae037a3c2f85
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 7535c8ee3b7ac0140bab6e1c0f1f39af, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 2c0547968c5bfab43ad06d4bed13c0b5, type: 2}

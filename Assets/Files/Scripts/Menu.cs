@@ -60,7 +60,7 @@ public class Menu : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUp
         // if(side == Side.right)
         //     return width / 2;
         // return -width * .4f;
-        return -height/1.6724f;
+        return -height/1.6818f;
     }
 
     private float GetMaxPosition() {
