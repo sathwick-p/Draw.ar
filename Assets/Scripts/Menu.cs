@@ -22,6 +22,7 @@ public class Menu : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUp
     void Start() {
         width = Screen.width;
         height = Screen.height;
+        
     }
 
     public void OnDrag(PointerEventData eventData) {
@@ -55,7 +56,7 @@ public class Menu : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUp
         
     }
     
-
+    
     private float GetMinPosition() {
         // if(side == Side.right)
         //     return width / 2;

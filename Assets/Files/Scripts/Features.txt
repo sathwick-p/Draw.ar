@@ -1,4 +1,0 @@
-Slider for size of line 
-Color picker 
-Save photo 
-

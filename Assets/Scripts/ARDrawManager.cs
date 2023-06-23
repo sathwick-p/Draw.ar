@@ -17,7 +17,7 @@ public class ARDrawManager : Singleton<ARDrawManager>
     [SerializeField]
     private ARAnchorManager anchorManager = null;
 
-    [SerializeField] 
+    [SerializeField]
     private Camera arCamera = null;
 
     private List<ARAnchor> anchors = new List<ARAnchor>();
@@ -32,16 +32,16 @@ public class ARDrawManager : Singleton<ARDrawManager>
     public Slider greenSlider;
     public Slider blueSlider;
     private Color LineColor;
-    void Update ()
+    void Update()
     {
-        #if !UNITY_EDITOR    
+#if !UNITY_EDITOR
         DrawOnTouch();
-        #else
+#else
         DrawOnMouse();
-        #endif
+#endif
 
 
-	}
+    }
 
     public void AllowDraw(bool isAllow)
     {
@@ -51,25 +51,25 @@ public class ARDrawManager : Singleton<ARDrawManager>
 
     void DrawOnTouch()
     {
-        if(!CanDraw) return;
+        if (!CanDraw) return;
 
         int tapCount = Input.touchCount > 1 && lineSettings.allowMultiTouch ? Input.touchCount : 1;
 
-        for(int i = 0; i < tapCount; i++)
+        for (int i = 0; i < tapCount; i++)
         {
             Touch touch = Input.GetTouch(i);
             Vector3 touchPosition = arCamera.ScreenToWorldPoint(new Vector3(Input.GetTouch(i).position.x, Input.GetTouch(i).position.y, lineSettings.distanceFromCamera));
-            
+
             ARDebugManager.Instance.LogInfo($"{touch.fingerId}");
 
-            if(touch.phase == TouchPhase.Began)
+            if (touch.phase == TouchPhase.Began)
             {
                 OnDraw?.Invoke();
-                
+
                 ARAnchor anchor = anchorManager.AddAnchor(new Pose(touchPosition, Quaternion.identity));
-                if (anchor == null) 
+                if (anchor == null)
                     Debug.LogError("Error creating reference point");
-                else 
+                else
                 {
                     anchors.Add(anchor);
                     ARDebugManager.Instance.LogInfo($"Anchor created & total of {anchors.Count} anchor(s)");
@@ -79,41 +79,44 @@ public class ARDrawManager : Singleton<ARDrawManager>
                 Lines.Add(touch.fingerId, line);
                 line.AddNewLineRenderer(transform, anchor, touchPosition);
             }
-            else if(touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
+            else if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
             {
                 Lines[touch.fingerId].AddPoint(touchPosition);
             }
-            else if(touch.phase == TouchPhase.Ended)
+            else if (touch.phase == TouchPhase.Ended)
             {
                 Lines.Remove(touch.fingerId);
             }
         }
+
+        Debug.Log(Lines.Keys);
+        ARDebugManager.Instance.LogInfo("" + Lines.Keys);
     }
 
     void DrawOnMouse()
     {
-        if(!CanDraw) return;
+        if (!CanDraw) return;
 
         Vector3 mousePosition = arCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, lineSettings.distanceFromCamera));
 
-        if(Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0))
         {
             OnDraw?.Invoke();
 
-            if(Lines.Keys.Count == 0)
+            if (Lines.Keys.Count == 0)
             {
                 ARLine line = new ARLine(lineSettings);
                 Lines.Add(0, line);
                 line.AddNewLineRenderer(transform, null, mousePosition);
             }
-            else 
+            else
             {
                 Lines[0].AddPoint(mousePosition);
             }
         }
-        else if(Input.GetMouseButtonUp(0))
+        else if (Input.GetMouseButtonUp(0))
         {
-            Lines.Remove(0);   
+            Lines.Remove(0);
         }
     }
 
@@ -130,33 +133,40 @@ public class ARDrawManager : Singleton<ARDrawManager>
             LineRenderer line = currentLine.GetComponent<LineRenderer>();
             Destroy(currentLine);
         }
+
+
     }
 
-    public void sliderChange(){
-        
+
+
+
+    public void sliderChange()
+    {
+
         lineSettings.startWidth = slider.value;
         lineSettings.endWidth = slider.value;
     }
-    
-        
-    
-    public void ColorValues(){
-        LineColor.r  = redSlider.value;
-        LineColor.g  = greenSlider.value;
-        LineColor.b  = blueSlider.value;
-        LineColor.a  = 255;
-        // lineSettings.startColor = LineColor;
-        // lineSettings.endColor = LineColor;
-        lineSettings.defaultMaterial = LineColorMat;
-        LineColorMat.color = new Color(redSlider.value,greenSlider.value,blueSlider.value,255);
-        // LineColorMat.SetColor("_Color",LineColor);
-        
-        // Debug.Log(""+lineSettings.startColor);
-        // Debug.Log("LS "+lineSettings.endColor);
-        Debug.Log("LC "+LineColor);
-        Debug.Log("MC "+LineColorMat.color);
+
+
+    void Start()
+    {
+        LineColorMat.SetColor("_Color", Color.white);
     }
-    
-    
+    public void ColorValues()
+    {
+        LineColor.r = redSlider.value;
+        LineColor.g = greenSlider.value;
+        LineColor.b = blueSlider.value;
+        LineColor.a = 255;
+
+        lineSettings.defaultMaterial = LineColorMat;
+        LineColorMat.color = new Color(redSlider.value / 255f, greenSlider.value / 255f, blueSlider.value / 255f, 255 / 255f);
+        // LineColorMat.SetColor("color",LineColor);
+        // Debug.Log(""+LineColorMat.name);
+        // Debug.Log("LC "+LineColor);
+        // Debug.Log("MC "+LineColorMat.color);
+    }
+
+
 
 }
