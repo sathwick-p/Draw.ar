@@ -13,5 +13,8 @@ As you might think, AR drawing app opens hundreds of use cases. Here’s just a 
 
 ## Features
 
+End to End with Size Manipulation
 
-https://github.com/sathwick-p/Draw.ar/assets/77117188/8c2a39ac-0de8-4a18-97fb-30bdd1841849
+https://github.com/sathwick-p/Draw.ar/assets/77117188/2b594539-7a30-4780-be7c-e7dde6af83b4
+
+
