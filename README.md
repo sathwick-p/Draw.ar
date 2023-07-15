@@ -17,4 +17,9 @@ End to End with Size Manipulation
 
 https://github.com/sathwick-p/Draw.ar/assets/77117188/2b594539-7a30-4780-be7c-e7dde6af83b4
 
+Color Manipulation
+
+https://github.com/sathwick-p/Draw.ar/assets/77117188/d403fbe7-8d60-4c97-b93a-5bdd655ef1a9
+
+
 
