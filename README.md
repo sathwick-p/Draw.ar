@@ -21,5 +21,18 @@ Color Manipulation
 
 https://github.com/sathwick-p/Draw.ar/assets/77117188/d403fbe7-8d60-4c97-b93a-5bdd655ef1a9
 
+Multi touch
+
+https://github.com/sathwick-p/Draw.ar/assets/77117188/2e703a9d-edab-4d21-b58d-5604a644e9cb
+
+Click and Save as image
+
+
+https://github.com/sathwick-p/Draw.ar/assets/77117188/4565867d-b00c-4e1f-960c-4bdd48da02fa
+
+![](https://github.com/sathwick-p/Draw.ar/assets/77117188/514665d0-e9c0-4973-b65e-c5448db08846)
+
+
+
 
 
