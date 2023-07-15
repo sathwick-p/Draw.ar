@@ -1,6 +1,7 @@
 # ARDraw
 
 The potential of such app is compared to the invention of writing itself. Google is successfully experimenting with such tools (Just a Line and Tilt Brush), but haven’t come up with the universal application yet.
+
 As you might think, AR drawing app opens hundreds of use cases. Here’s just a few of them:
 
 1. Replacement of blackboard/whiteboard.
