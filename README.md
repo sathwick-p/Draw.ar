@@ -28,9 +28,9 @@ https://github.com/sathwick-p/Draw.ar/assets/77117188/2e703a9d-edab-4d21-b58d-56
 Click and Save as image
 
 
-https://github.com/sathwick-p/Draw.ar/assets/77117188/4565867d-b00c-4e1f-960c-4bdd48da02fa
+https://github.com/sathwick-p/Draw.ar/assets/77117188/4565867d-b00c-4e1f-960c-4bdd48da02fa <img src="https://github.com/sathwick-p/Draw.ar/assets/77117188/2e703a9d-edab-4d21-b58d-5604a644e9cb" width = 300>
 
-![](https://github.com/sathwick-p/Draw.ar/assets/77117188/514665d0-e9c0-4973-b65e-c5448db08846)
+
 
 
 
