@@ -1,4 +1,4 @@
-# ARDraw
+# Draw.ar
 
 The potential of such app is compared to the invention of writing itself. Google is successfully experimenting with such tools (Just a Line and Tilt Brush), but haven’t come up with the universal application yet.
 
